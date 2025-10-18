@@ -1,10 +1,10 @@
-# Visual Studio
+# Visual Studio cache và build output
 .vs/
 bin/
 obj/
-packages/
 *.user
 *.suo
-*.tmp
-*.log
 *.cache
+*.log
+*.db
+*.pdb

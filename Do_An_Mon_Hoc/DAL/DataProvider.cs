@@ -24,7 +24,7 @@ namespace Do_An_Mon_Hoc.DAL
             private set => instance = value;
         }
 
-        private string connectionStr = "Data Source=DESKTOP-AOPR4T6\\SQLEXPRESS;Initial Catalog=Moi;Integrated Security=True;";
+        private string connectionStr = "Data Source=localhost;Initial Catalog=shopBanGiay;Integrated Security=True;Encrypt=False;";
         public DataTable excuteReader(string query, List<object> parameters = null)
         {
             DataTable table = new DataTable();

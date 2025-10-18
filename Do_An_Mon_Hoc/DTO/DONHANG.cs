@@ -21,7 +21,16 @@ namespace Do_An_Mon_Hoc.DTO
         {
             MaKH = row["MAKH"].ToString();
             MaHD = row["MAHD"].ToString();
-            NgayLap = DateTime.Parse(row["NGAYLAPHD"].ToString());
+            //NgayLap = DateTime.Parse(row["NGAYLAPHD"].ToString());
+            if (row["NGAYLAPHD"] == DBNull.Value || string.IsNullOrWhiteSpace(row["NGAYLAPHD"].ToString()))
+            {
+                NgayLap = DateTime.MinValue; // hoặc DateTime.Now tùy bạn muốn
+            }
+            else
+            {
+                NgayLap = DateTime.Parse(row["NGAYLAPHD"].ToString());
+            }
+
             TongTien = Convert.ToDecimal(row["TONGTIEN"]).ToString("N0");
             HoTen = row["HOTEN"].ToString();
         }
